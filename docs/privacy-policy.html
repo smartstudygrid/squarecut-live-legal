@@ -13,7 +13,7 @@
 <body>
 
 <h1>Privacy Policy – SquareCut Live</h1>
-<p class="muted">Last updated: 8 November 2026</p>
+<p class="muted">Last updated: 9 November 2026</p>
 
 <p>SquareCut Live ("the app") is an Android app developed by Amanullah Khan, based in Saudi Arabia. It lets you
 livestream cricket matches to YouTube and Facebook at the same time, and optionally save the same feed to your phone.
@@ -21,10 +21,11 @@ This policy explains what data the app handles and why.</p>
 
 <h2>1. Summary</h2>
 <ul>
-  <li>The app has no user accounts, no advertising, no analytics and no crash-reporting service.</li>
+  <li>The app has no SquareCut account, no advertising, no analytics and no crash-reporting service.</li>
+  <li>Facebook login is optional and handled entirely by Meta. We never see or store your Facebook password.</li>
   <li>We (the developer) do not receive, collect or store any of your data on our own servers.</li>
   <li>Camera and microphone data is processed on your device. It is sent only to the streaming destinations you configure.</li>
-  <li>Your stream keys and settings are stored only on your device.</li>
+  <li>Your stream keys, Facebook tokens and settings are stored only on your device, encrypted.</li>
 </ul>
 
 <h2>2. Data the app handles</h2>
@@ -37,6 +38,13 @@ This policy explains what data the app handles and why.</p>
   <li><strong>Stream settings.</strong> Your YouTube and Facebook server URLs and stream keys, the score ticker web address,
     video quality, recording mode, microphone mute state, and theme. These are stored in the app's private storage on your
     device and are sent only to the server addresses you entered.</li>
+  <li><strong>Facebook account and Pages (optional).</strong> If you tap <em>Continue with Facebook</em>, Meta's own
+    login screen asks for your permission. The app then receives your name, your Facebook user ID, the list of
+    Pages you manage, and access tokens for those Pages. It uses them only to show your streaming destinations and
+    to create or end a live video on the Page or professional profile you choose. The app requests the
+    <code>public_profile</code>, <code>pages_show_list</code>, <code>pages_read_engagement</code>,
+    <code>publish_video</code> and <code>pages_manage_posts</code> permissions. Tokens are stored encrypted on your
+    device and sent only to <code>graph.facebook.com</code>.</li>
   <li><strong>Score ticker.</strong> The ticker page you enter is loaded inside the app and drawn over the video. Loading
     that page is a normal web request to the site you chose, and that site may collect data under its own policy.</li>
   <li><strong>Notifications.</strong> The app shows a notification while live or recording, with a Stop button.</li>
@@ -46,7 +54,9 @@ This policy explains what data the app handles and why.</p>
 <p>When you go live, your video and audio are delivered to YouTube (Google LLC) and/or Facebook (Meta Platforms, Inc.)
 according to the stream keys you provide. Their handling of that data is governed by their own privacy policies:
 <a href="https://policies.google.com/privacy">Google</a> and <a href="https://www.facebook.com/privacy/policy/">Meta</a>.
-The score ticker page is provided by whichever website you choose.</p>
+Facebook login, the Page list and the Live Video API are provided by Meta; when you sign in, Meta also processes data
+under its own <a href="https://www.facebook.com/privacy/policy/">privacy policy</a>. The score ticker page is provided by
+whichever website you choose.</p>
 
 <h2>4. Permissions</h2>
 <ul>
@@ -55,16 +65,21 @@ The score ticker page is provided by whichever website you choose.</p>
   <li><strong>Notifications</strong>: to show the live or recording status.</li>
   <li><strong>Foreground service and wake lock</strong>: to keep the broadcast running when the screen is off.</li>
   <li><strong>Storage (Android 9 and older only)</strong>: to save recordings to the public Movies folder.</li>
+  <li><strong>Facebook login (optional)</strong>: opens Meta's login screen so you can pick the Page or professional
+    profile you want to stream to.</li>
 </ul>
 
 <h2>5. Retention and deletion</h2>
-<p>Settings and stream keys remain on your device until you clear the app's data or uninstall the app.
-Recordings remain in your gallery until you delete them. We hold no copies. To delete everything the app stores,
-uninstall it or clear its data in Android settings.</p>
+<p>Settings, stream keys and Facebook tokens remain on your device until you clear the app's data or uninstall the
+app. Recordings remain in your gallery until you delete them. We hold no copies. To delete everything the app stores,
+uninstall it or clear its data in Android settings. To remove the Facebook connection separately, tap <em>Sign out</em>
+under Settings &rarr; Facebook in the app, and remove SquareCut Live under Facebook
+<em>Settings &amp; privacy &rarr; Settings &rarr; Apps and Websites</em>.</p>
 
 <h2>6. Security</h2>
-<p>Stream keys are stored in the app's private storage, which Android protects by sandboxing. They are not separately
-encrypted. Keep your device locked and do not share your stream keys.</p>
+<p>Stream keys and Facebook access tokens are stored in an AES-256 encrypted preferences file backed by the Android
+Keystore, inside the app's private storage. The app never stores your Facebook password. Keep your device locked and do
+not share your stream keys.</p>
 
 <h2>7. Children</h2>
 <p>SquareCut Live is not directed at children under 13, and we do not knowingly collect personal information from them.</p>
